@@ -13,6 +13,7 @@ import {
 import { useRouter } from 'expo-router';
 import { useAuth } from '../../context/AuthContext';
 import { Ionicons } from '@expo/vector-icons';
+import { Colors } from '../../constants/theme';
 
 export default function Register() {
   const [name, setName] = useState('');
@@ -49,7 +50,7 @@ export default function Register() {
             style={styles.backButton}
             onPress={() => router.back()}
           >
-            <Ionicons name="arrow-back" size={24} color="#333" />
+            <Ionicons name="arrow-back" size={24} color={Colors.textDark} />
           </TouchableOpacity>
           <Text style={styles.title}>Create Account</Text>
           <Text style={styles.subtitle}>Join Playslot community</Text>
@@ -60,6 +61,7 @@ export default function Register() {
           <TextInput
             style={styles.input}
             placeholder="Enter your name"
+            placeholderTextColor={Colors.textMuted}
             value={name}
             onChangeText={setName}
           />
@@ -70,6 +72,7 @@ export default function Register() {
             <TextInput
               style={styles.inputInner}
               placeholder="Enter phone number"
+              placeholderTextColor={Colors.textMuted}
               value={phone}
               onChangeText={setPhone}
               keyboardType="phone-pad"
@@ -89,7 +92,7 @@ export default function Register() {
               <Ionicons
                 name="person"
                 size={24}
-                color={role === 'customer' ? '#fff' : '#4CAF50'}
+                color={role === 'customer' ? Colors.text : Colors.primary}
               />
               <Text
                 style={[
@@ -111,7 +114,7 @@ export default function Register() {
               <Ionicons
                 name="business"
                 size={24}
-                color={role === 'owner' ? '#fff' : '#4CAF50'}
+                color={role === 'owner' ? Colors.text : Colors.primary}
               />
               <Text
                 style={[
@@ -146,7 +149,7 @@ export default function Register() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: Colors.backgroundLight,
   },
   scrollContent: {
     flexGrow: 1,
@@ -162,12 +165,12 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 28,
     fontWeight: 'bold',
-    color: '#2E7D32',
+    color: Colors.textDark,
     marginBottom: 8,
   },
   subtitle: {
     fontSize: 16,
-    color: '#666',
+    color: Colors.textMuted,
   },
   form: {
     flex: 1,
@@ -175,35 +178,39 @@ const styles = StyleSheet.create({
   label: {
     fontSize: 14,
     fontWeight: '600',
-    color: '#333',
+    color: Colors.textDark,
     marginBottom: 8,
   },
   input: {
     borderWidth: 1,
-    borderColor: '#ddd',
+    borderColor: Colors.border,
     borderRadius: 12,
     padding: 16,
     fontSize: 16,
     marginBottom: 24,
+    backgroundColor: Colors.backgroundLight,
+    color: Colors.textDark,
   },
   inputContainer: {
     flexDirection: 'row',
     alignItems: 'center',
     borderWidth: 1,
-    borderColor: '#ddd',
+    borderColor: Colors.border,
     borderRadius: 12,
     marginBottom: 24,
     paddingHorizontal: 16,
+    backgroundColor: Colors.backgroundLight,
   },
   prefix: {
     fontSize: 16,
-    color: '#333',
+    color: Colors.textDark,
     marginRight: 8,
   },
   inputInner: {
     flex: 1,
     height: 48,
     fontSize: 16,
+    color: Colors.textDark,
   },
   roleContainer: {
     flexDirection: 'row',
@@ -216,40 +223,42 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     borderWidth: 2,
-    borderColor: '#4CAF50',
+    borderColor: Colors.primary,
     borderRadius: 12,
     padding: 16,
     gap: 8,
+    backgroundColor: Colors.backgroundLight,
   },
   roleButtonActive: {
-    backgroundColor: '#4CAF50',
+    backgroundColor: Colors.primary,
   },
   roleText: {
     fontSize: 14,
     fontWeight: '600',
-    color: '#4CAF50',
+    color: Colors.primary,
   },
   roleTextActive: {
-    color: '#fff',
+    color: Colors.text,
   },
   button: {
-    backgroundColor: '#4CAF50',
+    backgroundColor: Colors.primary,
     borderRadius: 12,
     padding: 16,
     alignItems: 'center',
     marginBottom: 16,
   },
   buttonDisabled: {
-    backgroundColor: '#A5D6A7',
+    backgroundColor: Colors.primaryLight,
+    opacity: 0.6,
   },
   buttonText: {
-    color: '#fff',
+    color: Colors.text,
     fontSize: 16,
     fontWeight: '600',
   },
   link: {
     textAlign: 'center',
-    color: '#4CAF50',
+    color: Colors.primary,
     fontSize: 14,
     marginTop: 8,
   },

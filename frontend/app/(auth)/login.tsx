@@ -60,8 +60,11 @@ export default function Login() {
     >
       <View style={styles.content}>
         <View style={styles.header}>
-          <Ionicons name="football" size={64} color="#4CAF50" />
-          <Text style={styles.title}>Playslot</Text>
+          <Image
+            source={require('../../assets/playslot-logo.png')}
+            style={styles.logo}
+            resizeMode="contain"
+          />
           <Text style={styles.subtitle}>Book your game, anytime!</Text>
         </View>
 
@@ -72,6 +75,7 @@ export default function Login() {
             <TextInput
               style={styles.input}
               placeholder="Enter phone number"
+              placeholderTextColor={Colors.textMuted}
               value={phone}
               onChangeText={setPhone}
               keyboardType="phone-pad"
@@ -86,6 +90,7 @@ export default function Login() {
               <TextInput
                 style={styles.inputFull}
                 placeholder="6-digit OTP"
+                placeholderTextColor={Colors.textMuted}
                 value={otp}
                 onChangeText={setOtp}
                 keyboardType="number-pad"
@@ -133,7 +138,7 @@ export default function Login() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: Colors.backgroundLight,
   },
   content: {
     flex: 1,
@@ -144,15 +149,14 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginBottom: 48,
   },
-  title: {
-    fontSize: 32,
-    fontWeight: 'bold',
-    color: '#2E7D32',
-    marginTop: 16,
+  logo: {
+    width: 200,
+    height: 80,
+    marginBottom: 16,
   },
   subtitle: {
     fontSize: 16,
-    color: '#666',
+    color: Colors.textMuted,
     marginTop: 8,
   },
   form: {
@@ -161,54 +165,59 @@ const styles = StyleSheet.create({
   label: {
     fontSize: 14,
     fontWeight: '600',
-    color: '#333',
+    color: Colors.textDark,
     marginBottom: 8,
   },
   inputContainer: {
     flexDirection: 'row',
     alignItems: 'center',
     borderWidth: 1,
-    borderColor: '#ddd',
+    borderColor: Colors.border,
     borderRadius: 12,
     marginBottom: 24,
     paddingHorizontal: 16,
+    backgroundColor: Colors.backgroundLight,
   },
   prefix: {
     fontSize: 16,
-    color: '#333',
+    color: Colors.textDark,
     marginRight: 8,
   },
   input: {
     flex: 1,
     height: 48,
     fontSize: 16,
+    color: Colors.textDark,
   },
   inputFull: {
     borderWidth: 1,
-    borderColor: '#ddd',
+    borderColor: Colors.border,
     borderRadius: 12,
     padding: 16,
     fontSize: 16,
     marginBottom: 24,
+    backgroundColor: Colors.backgroundLight,
+    color: Colors.textDark,
   },
   button: {
-    backgroundColor: '#4CAF50',
+    backgroundColor: Colors.primary,
     borderRadius: 12,
     padding: 16,
     alignItems: 'center',
     marginBottom: 16,
   },
   buttonDisabled: {
-    backgroundColor: '#A5D6A7',
+    backgroundColor: Colors.primaryLight,
+    opacity: 0.6,
   },
   buttonText: {
-    color: '#fff',
+    color: Colors.text,
     fontSize: 16,
     fontWeight: '600',
   },
   resend: {
     textAlign: 'center',
-    color: '#4CAF50',
+    color: Colors.primary,
     fontSize: 14,
     marginBottom: 24,
   },
@@ -220,11 +229,11 @@ const styles = StyleSheet.create({
   dividerLine: {
     flex: 1,
     height: 1,
-    backgroundColor: '#ddd',
+    backgroundColor: Colors.divider,
   },
   dividerText: {
     marginHorizontal: 16,
-    color: '#999',
+    color: Colors.textMuted,
     fontSize: 14,
   },
   googleButton: {
@@ -232,20 +241,21 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     borderWidth: 1,
-    borderColor: '#ddd',
+    borderColor: Colors.border,
     borderRadius: 12,
     padding: 16,
     marginBottom: 16,
+    backgroundColor: Colors.backgroundLight,
   },
   googleText: {
     marginLeft: 12,
     fontSize: 16,
-    color: '#333',
+    color: Colors.textDark,
     fontWeight: '500',
   },
   link: {
     textAlign: 'center',
-    color: '#4CAF50',
+    color: Colors.primary,
     fontSize: 14,
     marginTop: 8,
   },
