@@ -1,0 +1,250 @@
+import React, { useState } from 'react';
+import {
+  View,
+  Text,
+  TextInput,
+  TouchableOpacity,
+  StyleSheet,
+  KeyboardAvoidingView,
+  Platform,
+  Alert,
+} from 'react-native';
+import { useRouter } from 'expo-router';
+import { useAuth } from '../../context/AuthContext';
+import { Ionicons } from '@expo/vector-icons';
+
+export default function Login() {
+  const [phone, setPhone] = useState('');
+  const [otp, setOtp] = useState('');
+  const [otpSent, setOtpSent] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const router = useRouter();
+  const { login } = useAuth();
+
+  const sendOTP = async () => {
+    if (phone.length !== 10) {
+      Alert.alert('Error', 'Please enter a valid 10-digit phone number');
+      return;
+    }
+    setLoading(true);
+    // Placeholder - will integrate Firebase later
+    setTimeout(() => {
+      setOtpSent(true);
+      setLoading(false);
+      Alert.alert('Success', 'OTP sent to your phone (Demo: use any 6 digits)');
+    }, 1000);
+  };
+
+  const verifyOTP = async () => {
+    if (otp.length !== 6) {
+      Alert.alert('Error', 'Please enter a valid 6-digit OTP');
+      return;
+    }
+    setLoading(true);
+    try {
+      await login(phone, otp);
+      router.replace('/(tabs)/home');
+    } catch (error) {
+      Alert.alert('Error', 'Invalid OTP. Please try again.');
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  return (
+    <KeyboardAvoidingView
+      behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
+      style={styles.container}
+    >
+      <View style={styles.content}>
+        <View style={styles.header}>
+          <Ionicons name="football" size={64} color="#4CAF50" />
+          <Text style={styles.title}>Playslot</Text>
+          <Text style={styles.subtitle}>Book your game, anytime!</Text>
+        </View>
+
+        <View style={styles.form}>
+          <Text style={styles.label}>Phone Number</Text>
+          <View style={styles.inputContainer}>
+            <Text style={styles.prefix}>+91</Text>
+            <TextInput
+              style={styles.input}
+              placeholder="Enter phone number"
+              value={phone}
+              onChangeText={setPhone}
+              keyboardType="phone-pad"
+              maxLength={10}
+              editable={!otpSent}
+            />
+          </View>
+
+          {otpSent && (
+            <>
+              <Text style={styles.label}>Enter OTP</Text>
+              <TextInput
+                style={styles.inputFull}
+                placeholder="6-digit OTP"
+                value={otp}
+                onChangeText={setOtp}
+                keyboardType="number-pad"
+                maxLength={6}
+              />
+            </>
+          )}
+
+          <TouchableOpacity
+            style={[styles.button, loading && styles.buttonDisabled]}
+            onPress={otpSent ? verifyOTP : sendOTP}
+            disabled={loading}
+          >
+            <Text style={styles.buttonText}>
+              {loading ? 'Please wait...' : otpSent ? 'Verify OTP' : 'Send OTP'}
+            </Text>
+          </TouchableOpacity>
+
+          {otpSent && (
+            <TouchableOpacity onPress={() => setOtpSent(false)}>
+              <Text style={styles.resend}>Change Phone Number</Text>
+            </TouchableOpacity>
+          )}
+
+          <View style={styles.divider}>
+            <View style={styles.dividerLine} />
+            <Text style={styles.dividerText}>OR</Text>
+            <View style={styles.dividerLine} />
+          </View>
+
+          <TouchableOpacity style={styles.googleButton}>
+            <Ionicons name="logo-google" size={24} color="#DB4437" />
+            <Text style={styles.googleText}>Continue with Google</Text>
+          </TouchableOpacity>
+
+          <TouchableOpacity onPress={() => router.push('/(auth)/register')}>
+            <Text style={styles.link}>Don't have an account? Register</Text>
+          </TouchableOpacity>
+        </View>
+      </View>
+    </KeyboardAvoidingView>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+  },
+  content: {
+    flex: 1,
+    padding: 24,
+    justifyContent: 'center',
+  },
+  header: {
+    alignItems: 'center',
+    marginBottom: 48,
+  },
+  title: {
+    fontSize: 32,
+    fontWeight: 'bold',
+    color: '#2E7D32',
+    marginTop: 16,
+  },
+  subtitle: {
+    fontSize: 16,
+    color: '#666',
+    marginTop: 8,
+  },
+  form: {
+    width: '100%',
+  },
+  label: {
+    fontSize: 14,
+    fontWeight: '600',
+    color: '#333',
+    marginBottom: 8,
+  },
+  inputContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    borderWidth: 1,
+    borderColor: '#ddd',
+    borderRadius: 12,
+    marginBottom: 24,
+    paddingHorizontal: 16,
+  },
+  prefix: {
+    fontSize: 16,
+    color: '#333',
+    marginRight: 8,
+  },
+  input: {
+    flex: 1,
+    height: 48,
+    fontSize: 16,
+  },
+  inputFull: {
+    borderWidth: 1,
+    borderColor: '#ddd',
+    borderRadius: 12,
+    padding: 16,
+    fontSize: 16,
+    marginBottom: 24,
+  },
+  button: {
+    backgroundColor: '#4CAF50',
+    borderRadius: 12,
+    padding: 16,
+    alignItems: 'center',
+    marginBottom: 16,
+  },
+  buttonDisabled: {
+    backgroundColor: '#A5D6A7',
+  },
+  buttonText: {
+    color: '#fff',
+    fontSize: 16,
+    fontWeight: '600',
+  },
+  resend: {
+    textAlign: 'center',
+    color: '#4CAF50',
+    fontSize: 14,
+    marginBottom: 24,
+  },
+  divider: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginVertical: 24,
+  },
+  dividerLine: {
+    flex: 1,
+    height: 1,
+    backgroundColor: '#ddd',
+  },
+  dividerText: {
+    marginHorizontal: 16,
+    color: '#999',
+    fontSize: 14,
+  },
+  googleButton: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderWidth: 1,
+    borderColor: '#ddd',
+    borderRadius: 12,
+    padding: 16,
+    marginBottom: 16,
+  },
+  googleText: {
+    marginLeft: 12,
+    fontSize: 16,
+    color: '#333',
+    fontWeight: '500',
+  },
+  link: {
+    textAlign: 'center',
+    color: '#4CAF50',
+    fontSize: 14,
+    marginTop: 8,
+  },
+});
