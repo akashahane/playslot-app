@@ -94,7 +94,7 @@ export default function VenueDetail() {
   if (loading) {
     return (
       <View style={styles.loadingContainer}>
-        <ActivityIndicator size="large" color="#4CAF50" />
+        <ActivityIndicator size="large" color="#4EC0D6" />
       </View>
     );
   }
@@ -119,7 +119,7 @@ export default function VenueDetail() {
       <ScrollView style={styles.content}>
         <View style={styles.imageContainer}>
           <View style={styles.imagePlaceholder}>
-            <Ionicons name="football" size={80} color="#4CAF50" />
+            <Ionicons name="football" size={80} color="#4EC0D6" />
           </View>
         </View>
 
@@ -164,7 +164,7 @@ export default function VenueDetail() {
           <View style={styles.amenities}>
             {venue.amenities?.map((amenity: string, idx: number) => (
               <View key={idx} style={styles.amenityItem}>
-                <Ionicons name="checkmark-circle" size={20} color="#4CAF50" />
+                <Ionicons name="checkmark-circle" size={20} color="#4EC0D6" />
                 <Text style={styles.amenityText}>{amenity}</Text>
               </View>
             ))}
@@ -174,7 +174,7 @@ export default function VenueDetail() {
         <View style={styles.section}>
           <Text style={styles.sectionTitle}>Book Your Slot</Text>
           <TouchableOpacity style={styles.dateSelector} onPress={openDatePicker}>
-            <Ionicons name="calendar" size={20} color="#4CAF50" />
+            <Ionicons name="calendar" size={20} color="#4EC0D6" />
             <Text style={styles.dateSelectorText}>
               {selectedDate || 'Select Date'}
             </Text>
@@ -222,12 +222,12 @@ export default function VenueDetail() {
             onDayPress={onDateSelect}
             minDate={new Date().toISOString().split('T')[0]}
             markedDates={{
-              [selectedDate]: { selected: true, selectedColor: '#4CAF50' },
+              [selectedDate]: { selected: true, selectedColor: '#4EC0D6' },
             }}
             theme={{
-              todayTextColor: '#4CAF50',
-              selectedDayBackgroundColor: '#4CAF50',
-              arrowColor: '#4CAF50',
+              todayTextColor: '#4EC0D6',
+              selectedDayBackgroundColor: '#4EC0D6',
+              arrowColor: '#4EC0D6',
             }}
           />
         </BottomSheetView>
@@ -258,7 +258,7 @@ const styles = StyleSheet.create({
     color: '#999',
   },
   header: {
-    backgroundColor: '#4CAF50',
+    backgroundColor: '#4EC0D6',
     paddingTop: 48,
     paddingHorizontal: 24,
     paddingBottom: 16,
@@ -328,7 +328,7 @@ const styles = StyleSheet.create({
   priceText: {
     fontSize: 18,
     fontWeight: 'bold',
-    color: '#4CAF50',
+    color: '#4EC0D6',
   },
   sectionTitle: {
     fontSize: 18,
@@ -401,15 +401,15 @@ const styles = StyleSheet.create({
     paddingVertical: 10,
     borderRadius: 8,
     borderWidth: 1,
-    borderColor: '#4CAF50',
+    borderColor: '#4EC0D6',
     backgroundColor: '#fff',
   },
   slotChipSelected: {
-    backgroundColor: '#4CAF50',
+    backgroundColor: '#4EC0D6',
   },
   slotText: {
     fontSize: 14,
-    color: '#4CAF50',
+    color: '#4EC0D6',
     fontWeight: '600',
   },
   slotTextSelected: {

@@ -85,7 +85,7 @@ export default function Home() {
           />
         </View>
         <TouchableOpacity style={styles.filterButton} onPress={openFilters}>
-          <Ionicons name="calendar" size={24} color="#4CAF50" />
+          <Ionicons name="calendar" size={24} color="#4EC0D6" />
         </TouchableOpacity>
       </View>
 
@@ -107,7 +107,7 @@ export default function Home() {
             <Ionicons
               name={category.icon as any}
               size={20}
-              color={selectedCategory === category.id ? '#fff' : '#4CAF50'}
+              color={selectedCategory === category.id ? '#fff' : '#4EC0D6'}
             />
             <Text
               style={[
@@ -123,7 +123,7 @@ export default function Home() {
 
       {selectedDate && (
         <View style={styles.dateChip}>
-          <Ionicons name="calendar" size={16} color="#4CAF50" />
+          <Ionicons name="calendar" size={16} color="#4EC0D6" />
           <Text style={styles.dateText}>{selectedDate}</Text>
           <TouchableOpacity onPress={() => setSelectedDate('')}>
             <Ionicons name="close-circle" size={20} color="#999" />
@@ -133,7 +133,7 @@ export default function Home() {
 
       <ScrollView style={styles.venueList}>
         {loading ? (
-          <ActivityIndicator size="large" color="#4CAF50" style={{ marginTop: 32 }} />
+          <ActivityIndicator size="large" color="#4EC0D6" style={{ marginTop: 32 }} />
         ) : venues.length === 0 ? (
           <View style={styles.emptyState}>
             <Ionicons name="search" size={64} color="#ccc" />
@@ -148,7 +148,7 @@ export default function Home() {
               onPress={() => router.push(`/venue/${venue._id}`)}
             >
               <View style={styles.venueImage}>
-                <Ionicons name="football" size={48} color="#4CAF50" />
+                <Ionicons name="football" size={48} color="#4EC0D6" />
               </View>
               <View style={styles.venueInfo}>
                 <Text style={styles.venueName}>{venue.name}</Text>
@@ -191,12 +191,12 @@ export default function Home() {
             onDayPress={onDateSelect}
             minDate={new Date().toISOString().split('T')[0]}
             markedDates={{
-              [selectedDate]: { selected: true, selectedColor: '#4CAF50' },
+              [selectedDate]: { selected: true, selectedColor: '#4EC0D6' },
             }}
             theme={{
-              todayTextColor: '#4CAF50',
-              selectedDayBackgroundColor: '#4CAF50',
-              arrowColor: '#4CAF50',
+              todayTextColor: '#4EC0D6',
+              selectedDayBackgroundColor: '#4EC0D6',
+              arrowColor: '#4EC0D6',
             }}
           />
         </BottomSheetView>
@@ -214,7 +214,7 @@ const styles = StyleSheet.create({
     paddingTop: 48,
     paddingHorizontal: 24,
     paddingBottom: 16,
-    backgroundColor: '#4CAF50',
+    backgroundColor: '#4EC0D6',
   },
   headerTitle: {
     fontSize: 28,
@@ -269,16 +269,16 @@ const styles = StyleSheet.create({
     paddingVertical: 10,
     borderRadius: 20,
     borderWidth: 1,
-    borderColor: '#4CAF50',
+    borderColor: '#4EC0D6',
     gap: 6,
   },
   categoryChipActive: {
-    backgroundColor: '#4CAF50',
+    backgroundColor: '#4EC0D6',
   },
   categoryText: {
     fontSize: 14,
     fontWeight: '600',
-    color: '#4CAF50',
+    color: '#4EC0D6',
   },
   categoryTextActive: {
     color: '#fff',
@@ -363,7 +363,7 @@ const styles = StyleSheet.create({
   venuePrice: {
     fontSize: 14,
     fontWeight: '600',
-    color: '#4CAF50',
+    color: '#4EC0D6',
   },
   venueFooter: {
     flexDirection: 'row',

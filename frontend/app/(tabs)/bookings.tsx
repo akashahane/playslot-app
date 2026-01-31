@@ -44,7 +44,7 @@ export default function Bookings() {
   const getStatusColor = (status: string) => {
     switch (status) {
       case 'confirmed':
-        return '#4CAF50';
+        return '#4EC0D6';
       case 'pending':
         return '#FF9800';
       case 'cancelled':
@@ -83,7 +83,7 @@ export default function Bookings() {
 
       <ScrollView style={styles.content}>
         {loading ? (
-          <ActivityIndicator size="large" color="#4CAF50" style={{ marginTop: 32 }} />
+          <ActivityIndicator size="large" color="#4EC0D6" style={{ marginTop: 32 }} />
         ) : bookings.length === 0 ? (
           <View style={styles.emptyState}>
             <Ionicons name="calendar-outline" size={64} color="#ccc" />
@@ -177,7 +177,7 @@ const styles = StyleSheet.create({
     borderBottomColor: '#f0f0f0',
   },
   tabActive: {
-    borderBottomColor: '#4CAF50',
+    borderBottomColor: '#4EC0D6',
   },
   tabText: {
     fontSize: 16,
@@ -185,7 +185,7 @@ const styles = StyleSheet.create({
     color: '#999',
   },
   tabTextActive: {
-    color: '#4CAF50',
+    color: '#4EC0D6',
   },
   content: {
     flex: 1,
@@ -261,7 +261,7 @@ const styles = StyleSheet.create({
     paddingVertical: 10,
     borderRadius: 8,
     borderWidth: 1,
-    borderColor: '#4CAF50',
+    borderColor: '#4EC0D6',
     alignItems: 'center',
   },
   cancelButton: {
@@ -270,7 +270,7 @@ const styles = StyleSheet.create({
   actionText: {
     fontSize: 14,
     fontWeight: '600',
-    color: '#4CAF50',
+    color: '#4EC0D6',
   },
   cancelText: {
     color: '#F44336',

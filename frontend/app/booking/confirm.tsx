@@ -85,7 +85,7 @@ export default function ConfirmBooking() {
       <ScrollView style={styles.content}>
         <View style={styles.card}>
           <View style={styles.cardHeader}>
-            <Ionicons name="calendar" size={24} color="#4CAF50" />
+            <Ionicons name="calendar" size={24} color="#4EC0D6" />
             <Text style={styles.cardTitle}>Booking Summary</Text>
           </View>
 
@@ -121,7 +121,7 @@ export default function ConfirmBooking() {
 
         <View style={styles.card}>
           <View style={styles.cardHeader}>
-            <Ionicons name="card" size={24} color="#4CAF50" />
+            <Ionicons name="card" size={24} color="#4EC0D6" />
             <Text style={styles.cardTitle}>Payment Method</Text>
           </View>
 
@@ -140,7 +140,7 @@ export default function ConfirmBooking() {
 
         <View style={styles.card}>
           <View style={styles.cardHeader}>
-            <Ionicons name="information-circle" size={24} color="#4CAF50" />
+            <Ionicons name="information-circle" size={24} color="#4EC0D6" />
             <Text style={styles.cardTitle}>Cancellation Policy</Text>
           </View>
           <Text style={styles.policyText}>
@@ -252,7 +252,7 @@ const styles = StyleSheet.create({
   totalValue: {
     fontSize: 18,
     fontWeight: 'bold',
-    color: '#4CAF50',
+    color: '#4EC0D6',
   },
   paymentOption: {
     flexDirection: 'row',
@@ -305,7 +305,7 @@ const styles = StyleSheet.create({
     color: '#333',
   },
   confirmButton: {
-    backgroundColor: '#4CAF50',
+    backgroundColor: '#4EC0D6',
     paddingHorizontal: 32,
     paddingVertical: 16,
     borderRadius: 12,

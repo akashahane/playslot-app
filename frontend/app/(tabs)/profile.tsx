@@ -72,7 +72,7 @@ export default function Profile() {
               onPress={() => item.route && router.push(item.route as any)}
             >
               <View style={styles.menuItemLeft}>
-                <Ionicons name={item.icon as any} size={24} color="#4CAF50" />
+                <Ionicons name={item.icon as any} size={24} color="#4EC0D6" />
                 <Text style={styles.menuItemText}>{item.title}</Text>
               </View>
               <Ionicons name="chevron-forward" size={20} color="#999" />
@@ -118,7 +118,7 @@ const styles = StyleSheet.create({
     width: 100,
     height: 100,
     borderRadius: 50,
-    backgroundColor: '#4CAF50',
+    backgroundColor: '#4EC0D6',
     alignItems: 'center',
     justifyContent: 'center',
     marginBottom: 16,
