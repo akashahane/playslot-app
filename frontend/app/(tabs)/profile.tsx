@@ -135,7 +135,7 @@ const styles = StyleSheet.create({
     marginBottom: 12,
   },
   roleBadge: {
-    backgroundColor: '#E8F5E9',
+    backgroundColor: '#E0F7FA',
     paddingHorizontal: 16,
     paddingVertical: 6,
     borderRadius: 16,

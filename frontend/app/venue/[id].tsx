@@ -285,7 +285,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#E8F5E9',
+    backgroundColor: '#E0F7FA',
   },
   section: {
     padding: 24,
@@ -342,7 +342,7 @@ const styles = StyleSheet.create({
     gap: 8,
   },
   categoryBadge: {
-    backgroundColor: '#E8F5E9',
+    backgroundColor: '#E0F7FA',
     paddingHorizontal: 16,
     paddingVertical: 8,
     borderRadius: 20,

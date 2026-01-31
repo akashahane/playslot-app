@@ -223,7 +223,7 @@ const styles = StyleSheet.create({
   },
   headerSubtitle: {
     fontSize: 14,
-    color: '#E8F5E9',
+    color: '#E0F7FA',
     marginTop: 4,
   },
   searchSection: {
@@ -288,7 +288,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     paddingHorizontal: 16,
     paddingVertical: 8,
-    backgroundColor: '#E8F5E9',
+    backgroundColor: '#E0F7FA',
     marginHorizontal: 24,
     marginVertical: 8,
     borderRadius: 8,
@@ -335,7 +335,7 @@ const styles = StyleSheet.create({
   venueImage: {
     width: 80,
     height: 80,
-    backgroundColor: '#E8F5E9',
+    backgroundColor: '#E0F7FA',
     borderRadius: 12,
     alignItems: 'center',
     justifyContent: 'center',
@@ -382,7 +382,7 @@ const styles = StyleSheet.create({
     fontWeight: '600',
   },
   categoryBadge: {
-    backgroundColor: '#E8F5E9',
+    backgroundColor: '#E0F7FA',
     paddingHorizontal: 8,
     paddingVertical: 4,
     borderRadius: 6,
