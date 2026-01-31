@@ -8,10 +8,12 @@ import {
   KeyboardAvoidingView,
   Platform,
   Alert,
+  Image,
 } from 'react-native';
 import { useRouter } from 'expo-router';
 import { useAuth } from '../../context/AuthContext';
 import { Ionicons } from '@expo/vector-icons';
+import { Colors } from '../../constants/theme';
 
 export default function Login() {
   const [phone, setPhone] = useState('');
