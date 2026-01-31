@@ -297,7 +297,7 @@ const styles = StyleSheet.create({
   dateText: {
     flex: 1,
     fontSize: 14,
-    color: '#2E7D32',
+    color: '#3AA5BA',
     fontWeight: '600',
   },
   venueList: {
@@ -390,7 +390,7 @@ const styles = StyleSheet.create({
   },
   categoryBadgeText: {
     fontSize: 11,
-    color: '#2E7D32',
+    color: '#3AA5BA',
     fontWeight: '600',
   },
   bottomSheet: {

@@ -349,7 +349,7 @@ const styles = StyleSheet.create({
   },
   categoryText: {
     fontSize: 14,
-    color: '#2E7D32',
+    color: '#3AA5BA',
     fontWeight: '600',
   },
   description: {
