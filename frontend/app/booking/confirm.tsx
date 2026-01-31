@@ -313,7 +313,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   confirmButtonDisabled: {
-    backgroundColor: '#A5D6A7',
+    backgroundColor: '#6FD4E3',
   },
   confirmButtonText: {
     color: '#fff',
