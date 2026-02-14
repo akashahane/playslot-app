@@ -1,25 +1,25 @@
-// Playslot Brand Colors - Custom Color Scheme with Logo Teal
+// Playslot Brand Colors - Grayscale Palette with Teal Accent
 export const LightColors = {
   // Primary Brand Colors (From Logo - Keep Teal)
   primary: '#4EC0D6',
   primaryDark: '#3AA5BA',
   primaryLight: '#6FD4E3',
   
-  // Background Colors (Custom Scheme)
-  background: '#FBF7EB',        // Cream/Beige
-  backgroundSecondary: '#FFFFFF', // White
-  backgroundCard: '#FFFFFF',     // White
+  // Background Colors (Grayscale Palette)
+  background: '#f8f9fa',         // Bright Snow - Main background
+  backgroundSecondary: '#e9ecef', // Platinum - Secondary areas
+  backgroundCard: '#FFFFFF',      // Pure white for cards
   
   // Accent Colors
   accent: '#4EC0D6',
   accentLight: '#E0F7FA',
   
-  // Text Colors (Custom Scheme)
-  text: '#1A1A2E',              // Dark Navy
-  textPrimary: '#1A1A2E',       // Dark Navy
-  textSecondary: '#545454',      // Gray
-  textMuted: '#8B8B8B',         // Lighter Gray
-  textLight: '#FFFFFF',          // White
+  // Text Colors (Grayscale Palette)
+  text: '#212529',               // Carbon Black - Primary text
+  textPrimary: '#343a40',        // Gunmetal - Headings
+  textSecondary: '#6c757d',      // Slate Grey - Secondary text
+  textMuted: '#adb5bd',          // Pale Slate 2 - Muted text
+  textLight: '#FFFFFF',          // White on dark backgrounds
   
   // Status Colors
   success: '#4EC0D6',
@@ -27,11 +27,11 @@ export const LightColors = {
   error: '#F44336',
   info: '#4EC0D6',
   
-  // UI Colors
-  border: '#D4D0C4',            // Light border based on cream
-  divider: '#E8E4D8',           // Divider based on cream
+  // UI Colors (Grayscale Palette)
+  border: '#dee2e6',             // Alabaster Grey - Borders
+  divider: '#e9ecef',            // Platinum - Dividers
   shadow: '#000000',
-  overlay: 'rgba(26, 26, 46, 0.5)',
+  overlay: 'rgba(33, 37, 41, 0.5)',
   
   // Rating
   rating: '#FFB300',
@@ -43,20 +43,20 @@ export const DarkColors = {
   primaryDark: '#3AA5BA',
   primaryLight: '#6FD4E3',
   
-  // Background Colors (Custom Scheme)
-  background: '#1A1A2E',         // Dark Navy
-  backgroundSecondary: '#252538', // Slightly lighter navy
-  backgroundCard: '#2A2A3E',     // Card background
+  // Background Colors (Dark Grayscale)
+  background: '#212529',         // Carbon Black - Main background
+  backgroundSecondary: '#343a40', // Gunmetal - Secondary areas
+  backgroundCard: '#495057',     // Iron Grey - Cards
   
   // Accent Colors
   accent: '#4EC0D6',
   accentLight: '#1F3A40',
   
-  // Text Colors (Custom Scheme)
-  text: '#FFFFFF',               // White
-  textPrimary: '#FFFFFF',        // White
-  textSecondary: '#FBF7EB',      // Cream
-  textMuted: '#9A9AA0',          // Muted gray
+  // Text Colors (Dark Grayscale)
+  text: '#f8f9fa',               // Bright Snow - Primary text
+  textPrimary: '#FFFFFF',        // Pure White - Headings
+  textSecondary: '#ced4da',      // Pale Slate - Secondary text
+  textMuted: '#adb5bd',          // Pale Slate 2 - Muted text
   textLight: '#FFFFFF',          // White
   
   // Status Colors
@@ -65,9 +65,9 @@ export const DarkColors = {
   error: '#F44336',
   info: '#4EC0D6',
   
-  // UI Colors
-  border: '#3A3A4E',             // Dark border
-  divider: '#2F2F42',            // Dark divider
+  // UI Colors (Dark Grayscale)
+  border: '#495057',             // Iron Grey - Borders
+  divider: '#343a40',            // Gunmetal - Dividers
   shadow: '#000000',
   overlay: 'rgba(0, 0, 0, 0.7)',
   
