@@ -1,25 +1,25 @@
-// Playslot Brand Colors - Based on Logo
+// Playslot Brand Colors - Custom Color Scheme with Logo Teal
 export const LightColors = {
-  // Primary Brand Colors
+  // Primary Brand Colors (From Logo - Keep Teal)
   primary: '#4EC0D6',
   primaryDark: '#3AA5BA',
   primaryLight: '#6FD4E3',
   
-  // Background Colors
-  background: '#FFFFFF',
-  backgroundSecondary: '#F8F9FA',
-  backgroundCard: '#FFFFFF',
+  // Background Colors (Custom Scheme)
+  background: '#FBF7EB',        // Cream/Beige
+  backgroundSecondary: '#FFFFFF', // White
+  backgroundCard: '#FFFFFF',     // White
   
   // Accent Colors
   accent: '#4EC0D6',
   accentLight: '#E0F7FA',
   
-  // Text Colors
-  text: '#30363D',
-  textPrimary: '#30363D',
-  textSecondary: '#6C757D',
-  textMuted: '#ADB5BD',
-  textLight: '#FFFFFF',
+  // Text Colors (Custom Scheme)
+  text: '#1A1A2E',              // Dark Navy
+  textPrimary: '#1A1A2E',       // Dark Navy
+  textSecondary: '#545454',      // Gray
+  textMuted: '#8B8B8B',         // Lighter Gray
+  textLight: '#FFFFFF',          // White
   
   // Status Colors
   success: '#4EC0D6',
@@ -28,36 +28,36 @@ export const LightColors = {
   info: '#4EC0D6',
   
   // UI Colors
-  border: '#DEE2E6',
-  divider: '#E9ECEF',
+  border: '#D4D0C4',            // Light border based on cream
+  divider: '#E8E4D8',           // Divider based on cream
   shadow: '#000000',
-  overlay: 'rgba(0, 0, 0, 0.5)',
+  overlay: 'rgba(26, 26, 46, 0.5)',
   
   // Rating
   rating: '#FFB300',
 };
 
 export const DarkColors = {
-  // Primary Brand Colors
+  // Primary Brand Colors (From Logo - Keep Teal)
   primary: '#4EC0D6',
   primaryDark: '#3AA5BA',
   primaryLight: '#6FD4E3',
   
-  // Background Colors
-  background: '#1A1D23',
-  backgroundSecondary: '#242830',
-  backgroundCard: '#2C3038',
+  // Background Colors (Custom Scheme)
+  background: '#1A1A2E',         // Dark Navy
+  backgroundSecondary: '#252538', // Slightly lighter navy
+  backgroundCard: '#2A2A3E',     // Card background
   
   // Accent Colors
   accent: '#4EC0D6',
   accentLight: '#1F3A40',
   
-  // Text Colors
-  text: '#FFFFFF',
-  textPrimary: '#FFFFFF',
-  textSecondary: '#B8C5D3',
-  textMuted: '#8B98A8',
-  textLight: '#FFFFFF',
+  // Text Colors (Custom Scheme)
+  text: '#FFFFFF',               // White
+  textPrimary: '#FFFFFF',        // White
+  textSecondary: '#FBF7EB',      // Cream
+  textMuted: '#9A9AA0',          // Muted gray
+  textLight: '#FFFFFF',          // White
   
   // Status Colors
   success: '#4EC0D6',
@@ -66,8 +66,8 @@ export const DarkColors = {
   info: '#4EC0D6',
   
   // UI Colors
-  border: '#3D444D',
-  divider: '#2C3038',
+  border: '#3A3A4E',             // Dark border
+  divider: '#2F2F42',            // Dark divider
   shadow: '#000000',
   overlay: 'rgba(0, 0, 0, 0.7)',
   
